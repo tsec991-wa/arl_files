@@ -22,12 +22,12 @@ jobs:
         python-version: '3.x'
         
     - name: Update Nuclei
-      run: cd tools && pip install requests && python nuclei_download.py
+      run: pip install requests && python nuclei_download.py
       
     - name: Update GeoLite2-ASN
-      run: cd tools && wget https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb -O GeoLite2-ASN.mmdb
+      run: wget https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb -O GeoLite2-ASN.mmdb
     - name: Update GeoLite2-City
-      run: cd tools && wget https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-City.mmdb -O GeoLite2-City.mmdb
+      run: wget https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-City.mmdb -O GeoLite2-City.mmdb
       
     - name: Commit and Push changes
       run: |
